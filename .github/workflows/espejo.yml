@@ -1,0 +1,66 @@
+# Espejo publico del libro de takepower.world: cada hora copia lo nuevo, lo verifica y lo sella con OpenTimestamps.
+# No usa ningun secreto: solo LEE https://takepower.world/ledger/ y escribe en este mismo repositorio con el GITHUB_TOKEN de la corrida.
+name: espejo
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: espejo
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Descargar este repositorio
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Instalar el cliente de OpenTimestamps (versiones y hashes fijos)
+        run: |
+          python3 -m venv "$RUNNER_TEMP/ots"
+          "$RUNNER_TEMP/ots/bin/pip" install --quiet --require-hashes --no-deps -r requirements-ots.txt
+          "$RUNNER_TEMP/ots/bin/ots" --version
+
+      - name: Sincronizar, verificar y sellar
+        id: sync
+        run: |
+          set +e
+          python3 mirror_sync.py --ots "$RUNNER_TEMP/ots/bin/ots" --mensaje "$RUNNER_TEMP/mensaje.txt"
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Guardar lo nuevo en el repositorio
+        if: steps.sync.outputs.code == '0' || steps.sync.outputs.code == '4' || steps.sync.outputs.code == '5'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'sin cambios'
+          else
+            git commit --quiet -F "$RUNNER_TEMP/mensaje.txt"
+            git push --quiet
+          fi
+
+      # Codigo 5: el espejo copio, verifico y guardo todo, pero el libro publicado trae una ALERTA (cuentas nuevas que no cuadran, no se
+      # actualiza hace mas de 3 horas, o el generador avisa de algo). Esta corrida termina en rojo a proposito: GitHub le avisa por correo
+      # a quien creo este workflow (segun SUS notificaciones; en este repositorio no hay ninguna direccion de correo).
+      - name: "ALERTA: el libro publicado trae una alerta (el detalle esta en el paso Sincronizar, en las lineas ALERTA)"
+        if: steps.sync.outputs.code == '5'
+        run: |
+          echo "El libro de takepower.world trae una alerta. Lo nuevo ya quedo guardado en este repositorio (si algo no se pudo sellar, la proxima corrida lo reintenta)."
+          echo "Esta corrida termina en rojo a proposito, para que GitHub avise. El detalle esta en la salida del paso Sincronizar, verificar y sellar."
+          exit 1
+
+      - name: "FALLO: el espejo no pudo copiar, verificar o sellar el libro"
+        if: steps.sync.outputs.code != '0' && steps.sync.outputs.code != '5'
+        run: |
+          echo "mirror_sync.py termino con el codigo ${{ steps.sync.outputs.code }} (1: el libro no pasa la verificacion o cambio lo ya publicado; 2: no se pudo descargar; 4: no se pudo sellar)"
+          exit 1

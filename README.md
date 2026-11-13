@@ -84,3 +84,8 @@ The complete list is in [SPEC.md](SPEC.md) section 9.
 ## Reporting a problem
 
 Open an issue in this repository. If you find a way to make `verify_ledger.py` accept a ledger it should reject (or the other way round), that is the most useful report there is.
+
+## License
+
+- **Code** (`verify_ledger.py`, `mirror_sync.py`, `.github/workflows/espejo.yml` and `requirements-ots.txt`): MIT license, in [LICENSE](LICENSE).
+- **Data and text** (the ledger: `bloques/`, `indice.json`, `estado.json` and the `.ots` proofs; also `SPEC.md`, `SPEC.es.md` and these READMEs): dedicated to the public domain under [CC0 1.0](LICENSE-DATA). The same applies to the ledger that takepower.world publishes at `/ledger/`: you may copy, quote and reuse it without asking permission.

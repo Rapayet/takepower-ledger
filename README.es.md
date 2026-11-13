@@ -84,3 +84,8 @@ La lista completa está en [SPEC.es.md](SPEC.es.md), sección 9.
 ## Avisar de un problema
 
 Abre un issue en este repositorio. Si encuentras la forma de que `verify_ledger.py` acepte un libro que debería rechazar (o al revés), ese es el informe más útil que hay.
+
+## Licencia
+
+- **Código** (`verify_ledger.py`, `mirror_sync.py`, `.github/workflows/espejo.yml` y `requirements-ots.txt`): licencia MIT, en [LICENSE](LICENSE).
+- **Datos y textos** (el libro: `bloques/`, `indice.json`, `estado.json` y los sellos `.ots`; también `SPEC.md`, `SPEC.es.md` y estos README): dedicados al dominio público con [CC0 1.0](LICENSE-DATA). Vale igual para el libro que takepower.world publica en `/ledger/`: puedes copiarlo, citarlo y reutilizarlo sin pedir permiso.

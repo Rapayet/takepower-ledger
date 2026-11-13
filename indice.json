@@ -1,0 +1,13 @@
+{
+ "formato": "takepower-ledger/1",
+ "bloques": [
+  {
+   "bloque": 1,
+   "archivo": "bloques/000001.json",
+   "sha256": "7514211e6f616f1728b94b598a245ceae596c6033b779f328ad8904b81a7ac0e",
+   "cerrado_en": "2026-11-13T23:07:46.188Z",
+   "motivo": "inicio",
+   "movimientos": 0
+  }
+ ]
+}

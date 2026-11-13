@@ -1,0 +1,23 @@
+{
+ "formato": "takepower-ledger/1",
+ "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
+ "actualizado_en": "2026-11-13T23:07:46.188Z",
+ "reglas": {
+  "movimientos_por_bloque": 5,
+  "horas_maximas": 24,
+  "latido_dias": 7,
+  "gracia_minutos": 15
+ },
+ "bloques": 1,
+ "ultimo_bloque": {
+  "bloque": 1,
+  "sha256": "7514211e6f616f1728b94b598a245ceae596c6033b779f328ad8904b81a7ac0e",
+  "cerrado_en": "2026-11-13T23:07:46.188Z",
+  "motivo": "inicio"
+ },
+ "movimientos_sellados": 0,
+ "saldo_sat": 0,
+ "credito_comisiones_sat": 0,
+ "abierto": [],
+ "alertas": []
+}

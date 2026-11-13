@@ -1,0 +1,12 @@
+{
+  "formato": "takepower-ledger/1",
+  "bloque": 1,
+  "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
+  "anterior": "0000000000000000000000000000000000000000000000000000000000000000",
+  "cerrado_en": "2026-11-13T23:07:46.188Z",
+  "motivo": "inicio",
+  "rango": null,
+  "saldo_sat": 0,
+  "credito_comisiones_sat": 0,
+  "movimientos": []
+}

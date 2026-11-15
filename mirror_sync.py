@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """mirror_sync.py - copia el libro publico de takepower.world a este repositorio (el espejo) y lo sella con OpenTimestamps.
 
-Corre en GitHub Actions cada hora (ver .github/workflows/espejo.yml). No tiene ninguna credencial del servidor: solo LEE
+Corre en GitHub Actions, programado cada hora (con la frecuencia que GitHub permita; ver .github/workflows/espejo.yml). No tiene ninguna credencial del servidor: solo LEE
 https://takepower.world/ledger/ y escribe en la carpeta del espejo. Lo que hace, en orden:
 
   1. Baja el libro publicado y lo verifica con verify_ledger.py. Si no pasa la verificacion, no toca nada.
@@ -68,7 +68,7 @@ def error_gh(texto):
 
 def separar_avisos(avisos, ya_vistos):
     """Reparte los avisos del libro publicado en (alertas, comunes). Una alerta W01 que el espejo ya tenia (el mismo texto, del mismo
-    bloque) no vuelve a alertar: el hueco contable quedo en la historia y avisar cada hora no le sirve a nadie."""
+    bloque) no vuelve a alertar: el hueco contable quedo en la historia y avisar en cada corrida no le sirve a nadie."""
     alertas, comunes = [], []
     for c, t in avisos:
         if c in AVISOS_QUE_ALERTAN and not (c == 'W01' and (c, t) in ya_vistos):

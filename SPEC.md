@@ -157,7 +157,7 @@ The hash of the last block is a commitment to the whole history. The public mirr
 - **The balance is the operator's word** when it comes from a private channel: nobody else can see it. The sum check (W01) shows if the movements and the balance are consistent with each other, nothing more.
 - **Claims cannot be proven to come from distinct real people.** A `reclamo` is a payment the faucet sent; the ledger cannot show that the person behind it is unique or real.
 - **Classification (`gasto`, `retiro`) is the operator's own annotation.** Only `sin_clasificar` is automatic.
-- **The watching is only as good as its schedule.** The mirror runs on GitHub's scheduler, which is best effort (a run can be late or, rarely, skipped), and GitHub disables the scheduled workflows of a public repository after 60 days without activity (the hourly commits keep it active while the ledger is alive). A mirror that stops running raises no alert by itself; keep your own copy and compare.
+- **The watching is only as good as its schedule.** The mirror runs on GitHub's scheduler, which is best effort (a run can be late or skipped, and how often depends on GitHub's load: the public commit history shows when each copy was actually made), and GitHub disables the scheduled workflows of a public repository after 60 days without activity (the commits the runs make keep it active while the ledger is alive). A mirror that stops running raises no alert by itself; keep your own copy and compare.
 - A copy that is not compared against the mirror or an OpenTimestamps proof can be replaced as a whole (every file rewritten consistently). Keep the hash of the last block you saw.
 
 ## 10. Versions

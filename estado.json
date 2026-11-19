@@ -1,7 +1,7 @@
 {
  "formato": "takepower-ledger/1",
  "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
- "actualizado_en": "2026-11-19T03:07:03.243Z",
+ "actualizado_en": "2026-11-19T13:07:14.919Z",
  "reglas": {
   "movimientos_por_bloque": 5,
   "horas_maximas": 24,
@@ -30,7 +30,7 @@
   {
    "hora": "2026-11-19T02:49:02.375Z",
    "tipo": "entrada",
-   "sats": 126473,
+   "sats": 150000,
    "comision_msat": 23527000,
    "hash_pago": "07326b97addd7ca9eb7ee27ea275489b63f09bbf3afb9ce27d56875d97b9634f"
   },
@@ -42,7 +42,5 @@
    "hash_pago": "bfbe5fb11908c3f5461f7e7face6d3476565dc609bda7a64cbfacb84a92eda47"
   }
  ],
- "alertas": [
-  "diferencia contable de 23527 sats entre el saldo del nodo (116429) y el saldo inicial mas los movimientos (92902); puede ser transitoria (pagos en curso)"
- ]
+ "alertas": []
 }

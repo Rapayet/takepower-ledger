@@ -8,6 +8,14 @@
    "cerrado_en": "2026-11-13T23:07:46.188Z",
    "motivo": "inicio",
    "movimientos": 0
+  },
+  {
+   "bloque": 2,
+   "archivo": "bloques/000002.json",
+   "sha256": "1befc9a2557166d2d90ff3231481c25e154b5f635f4ed6e853e08fd343ba9abb",
+   "cerrado_en": "2026-11-20T03:07:03.791Z",
+   "motivo": "24_horas",
+   "movimientos": 3
   }
  ]
 }

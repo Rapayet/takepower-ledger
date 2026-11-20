@@ -1,0 +1,16 @@
+{
+  "formato": "takepower-ledger/1",
+  "bloque": 2,
+  "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
+  "anterior": "7514211e6f616f1728b94b598a245ceae596c6033b779f328ad8904b81a7ac0e",
+  "cerrado_en": "2026-11-20T03:07:03.791Z",
+  "motivo": "24_horas",
+  "rango": [1,3],
+  "saldo_sat": 116429,
+  "credito_comisiones_sat": 0,
+  "movimientos": [
+    {"n":1,"hora":"2026-11-19T02:49:01.740Z","tipo":"liquidez","sats":-23527,"comision_msat":23527000,"hash_pago":null,"tx":"ca242f44fb6189dba4801191e643818a19d9278a5337838dbed0e1a9cca81ae4"},
+    {"n":2,"hora":"2026-11-19T02:49:02.375Z","tipo":"entrada","sats":150000,"comision_msat":23527000,"hash_pago":"07326b97addd7ca9eb7ee27ea275489b63f09bbf3afb9ce27d56875d97b9634f"},
+    {"n":3,"hora":"2026-11-19T02:57:44.288Z","tipo":"reclamo","sats":-10044,"comision_msat":44000,"hash_pago":"bfbe5fb11908c3f5461f7e7face6d3476565dc609bda7a64cbfacb84a92eda47"}
+  ]
+}

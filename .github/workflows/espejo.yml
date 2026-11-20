@@ -1,4 +1,4 @@
-# Espejo publico del libro de takepower.world: cada hora copia lo nuevo, lo verifica y lo sella con OpenTimestamps.
+# Espejo publico del libro de takepower.world: programado cada hora (GitHub lo corre con la frecuencia que permita), copia lo nuevo, lo verifica y lo sella con OpenTimestamps.
 # No usa ningun secreto: solo LEE https://takepower.world/ledger/ y escribe en este mismo repositorio con el GITHUB_TOKEN de la corrida.
 name: espejo
 

@@ -1,0 +1,14 @@
+{
+  "formato": "takepower-ledger/1",
+  "bloque": 3,
+  "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
+  "anterior": "1befc9a2557166d2d90ff3231481c25e154b5f635f4ed6e853e08fd343ba9abb",
+  "cerrado_en": "2026-11-21T22:07:27.747Z",
+  "motivo": "24_horas",
+  "rango": [4,4],
+  "saldo_sat": 85206,
+  "credito_comisiones_sat": 0,
+  "movimientos": [
+    {"n":4,"hora":"2026-11-20T21:28:10.441Z","tipo":"gasto","sats":-31223,"comision_msat":283000,"hash_pago":null,"tx":"09dfcc41cd40c4918d25f2902e814429e4ed88da4b11bf918da2f93ac84b022a"}
+  ]
+}

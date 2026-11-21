@@ -16,6 +16,14 @@
    "cerrado_en": "2026-11-20T03:07:03.791Z",
    "motivo": "24_horas",
    "movimientos": 3
+  },
+  {
+   "bloque": 3,
+   "archivo": "bloques/000003.json",
+   "sha256": "580d7369d9d050c89bedbe7f78c1384c5aacc85c957c16f761133005bacdfd30",
+   "cerrado_en": "2026-11-21T22:07:27.747Z",
+   "motivo": "24_horas",
+   "movimientos": 1
   }
  ]
 }

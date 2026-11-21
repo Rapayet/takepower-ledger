@@ -1,32 +1,23 @@
 {
  "formato": "takepower-ledger/1",
  "nodo": "032d1f66f3d7b4fa1421d61b1b8f7f9bccb3d4786c972690ab29809113371525db",
- "actualizado_en": "2026-11-21T17:07:32.535Z",
+ "actualizado_en": "2026-11-21T23:07:32.548Z",
  "reglas": {
   "movimientos_por_bloque": 5,
   "horas_maximas": 24,
   "latido_dias": 7,
   "gracia_minutos": 15
  },
- "bloques": 2,
+ "bloques": 3,
  "ultimo_bloque": {
-  "bloque": 2,
-  "sha256": "1befc9a2557166d2d90ff3231481c25e154b5f635f4ed6e853e08fd343ba9abb",
-  "cerrado_en": "2026-11-20T03:07:03.791Z",
+  "bloque": 3,
+  "sha256": "580d7369d9d050c89bedbe7f78c1384c5aacc85c957c16f761133005bacdfd30",
+  "cerrado_en": "2026-11-21T22:07:27.747Z",
   "motivo": "24_horas"
  },
- "movimientos_sellados": 3,
+ "movimientos_sellados": 4,
  "saldo_sat": 85206,
  "credito_comisiones_sat": 0,
- "abierto": [
-  {
-   "hora": "2026-11-20T21:28:10.441Z",
-   "tipo": "gasto",
-   "sats": -31223,
-   "comision_msat": 283000,
-   "hash_pago": null,
-   "tx": "09dfcc41cd40c4918d25f2902e814429e4ed88da4b11bf918da2f93ac84b022a"
-  }
- ],
+ "abierto": [],
  "alertas": []
 }
